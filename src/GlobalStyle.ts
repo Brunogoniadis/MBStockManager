@@ -9,8 +9,8 @@ export default createGlobalStyle`
         --color-buttonHover:#FFFFFF;
         --color-text:#1e1e1e;
         --color-containerPages:#fbfbfb;
-        --color-backgroundMain:#F5F5F5;
-        --color-border:#E7E7E7;
+        --color-backgroundMain:#F8E9E9 ;
+        --color-border:#b9b9b9;
 
     font-size: 60%;
     }
@@ -51,6 +51,7 @@ export default createGlobalStyle`
 
     button {
         cursor: pointer;
+        font-style: ;
     }
     
 `
