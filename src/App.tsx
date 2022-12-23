@@ -1,6 +1,6 @@
 import GlobalStyle from "./GlobalStyle"
 import { Main } from "./styles/Main"
-import { Container } from "./components/FormInitialPage/styles"
+import { Login } from "./Pages/Login"
 
 
 export const App = () => {
@@ -8,9 +8,8 @@ export const App = () => {
     <>
       <GlobalStyle/>
         <Main>
-        <h1>MBStock</h1>
-        
-          <Container></Container>
+
+        <Login></Login>
         </Main>
     </>
   )
