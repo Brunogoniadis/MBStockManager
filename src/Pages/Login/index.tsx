@@ -20,11 +20,6 @@ export const Login = () =>(
             </Button>
 
 
-            <pContainer>
-                <p>Não possui acesso? Crie aqui!</p>
-                <p>Esqueci a minha senha</p>
-            </pContainer>
-
         </Container>
     </>
 
