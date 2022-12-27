@@ -1,7 +1,7 @@
 import { Button } from "../../styles/Button";
 import { Container, Logo, AsideContainer} from "./styles";
 import { Input } from "../../components/Input/"
-
+import { PageNumber } from "../../components/PageNumber";
 
 import MBStock from "./../../../public/MBStock.svg"
 
@@ -11,13 +11,16 @@ export const Register = () =>(
         <Logo src={MBStock}/>    
         <Container>
 
+
+        <PageNumber/>
+
         <AsideContainer>
         <Input
                 id='name'
                 label='Nome'
                 type='text'
             >
-            </Input>
+        </Input>
 
 
             <Input

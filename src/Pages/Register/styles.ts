@@ -2,9 +2,11 @@ import styled from "styled-components";
 
 export const Container= styled.div`
     display: flex;
+    align-items: center;
+    
     flex-direction: column;
     text-align: center;
-
+    
     
     width: 400px;
     height: 380px;
@@ -20,7 +22,6 @@ export const Container= styled.div`
 export const AsideContainer= styled.div`
     width: 100%;
     height: 90%;
-    background-color: beige;
 `
 
 
