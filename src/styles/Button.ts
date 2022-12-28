@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { Link as LinkRouter } from 'react-router-dom'
 
 interface IButtonProps{
-    variant: 'primary' | 'error' | 'inline' ;
+    variant: 'primary' | 'error' | 'inline' | 'noline' ;
     width?: string
 }
 
@@ -19,6 +19,11 @@ const ButtonStyled ={
         background: none;
         color: var(--color-text);
         text-decoration: underline;
+    `,
+    noline: css`
+        background: none;
+        color: var(--color-text);
+        text-decoration: none;
     `,
 }
 

@@ -19,7 +19,7 @@ export const Container= styled.div`
         margin-top: 25px;
     }
 `
-export const AsideContainer= styled.div`
+export const StepContainer= styled.div`
     width: 100%;
     height: 90%;
 `

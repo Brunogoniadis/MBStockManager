@@ -1,7 +1,5 @@
-import { Container, Circle1 , Circle2 } from "./styles"
-import GiPlainCircle from "react"
-import { IPageNumberProps } from "./types"
-
+import { Container, Circle1, Circle2} from "./styles"
+import { IPageNumberProps } from "./styles"
 
 
 export const PageNumber = ({pageNumber}: IPageNumberProps) => {
@@ -9,8 +7,8 @@ export const PageNumber = ({pageNumber}: IPageNumberProps) => {
     return(
         <>
             <Container >
-                    <Circle1 />
-                    <Circle2/>
+                    <Circle1 key={0} pageNumber={pageNumber}/>
+                    <Circle2 key={0} pageNumber={pageNumber}/>
             </Container>
         </>
     )

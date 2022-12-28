@@ -35,7 +35,7 @@ export const Login = () =>(
                 Não possui acesso? Crie aqui!
             </Button>
 
-            <Button variant="inline">
+            <Button variant="noline">
                 <p>Esqueci minha senha</p>
             </Button>
 
