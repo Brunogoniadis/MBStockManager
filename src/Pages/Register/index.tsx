@@ -23,10 +23,9 @@ export const Register = () => {
 
 
             <Container step={step}>
-            <legend>Faça o seu registro:</legend>
+                <legend>Faça o seu registro:</legend>
+                <PageNumber key={0} pageNumber={step} />
 
-
-<PageNumber key={0} pageNumber={step} />
                 <fieldset>
 
 
