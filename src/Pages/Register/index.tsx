@@ -1,18 +1,21 @@
 import { useState } from "react";
+import { useForm } from "react-hook-form";
 
 import { Button } from "../../styles/Button";
-import { Container, Logo, StepContainer } from "../../styles/FormStep";
+import { Logo, FormStep  } from "../../styles/FormStep";
 import { Input } from "../../components/Input/"
 import { PageNumber } from "../../components/PageNumber";
 
 
 import MBStock from "./../../../public/MBStock.svg"
 
+import { IRegisterData } from "./types";
 
 export const Register = () => {
 
 
     const [step, setStep] = useState(1);
+    const { register } = useForm();
 
 
     return (
@@ -22,7 +25,7 @@ export const Register = () => {
 
 
 
-            <Container step={step}>
+            <FormStep step={step}>
                 <legend>Faça o seu registro:</legend>
                 <PageNumber key={0} pageNumber={step} />
 
@@ -87,7 +90,7 @@ export const Register = () => {
 
 
                 </fieldset>
-            </Container>
+            </FormStep >
 
         </>
 

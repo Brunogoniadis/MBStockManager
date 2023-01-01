@@ -6,7 +6,7 @@ interface IFormStepProps {
 
 
 
-export const Container = styled.form<IFormStepProps>`
+export const FormStep  = styled.form<IFormStepProps>`
     
     --selected-item: ${({ step }) => step - 1};
     --total-items: 2;
@@ -21,8 +21,6 @@ export const Container = styled.form<IFormStepProps>`
     text-align: center;
     border-radius: 16px;
 
-   
-  
 
     background-color: var(--color-containerPages);
     box-shadow: 1.0px 4px 4px rgba(0, 0, 0, 0.5);

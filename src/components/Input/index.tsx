@@ -2,7 +2,8 @@ import { forwardRef } from 'react';
 import { Container } from "./styles"
 import { IInputProps } from "./types"
 
-export const Input = forwardRef<HTMLInputElement, IInputProps>(
+
+export const Input = forwardRef <HTMLInputElement, IInputProps>(
     ({ id, label, alt, error, children, ...rest }, ref) => (
         <Container>
             <div>
