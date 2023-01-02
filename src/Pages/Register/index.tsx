@@ -1,22 +1,40 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Button } from "../../styles/Button";
+
+import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
+
 import { Logo, FormStep  } from "../../styles/FormStep";
 import { Input } from "../../components/Input/"
 import { PageNumber } from "../../components/PageNumber";
 
-
+import { IRegisterData } from "./types";
 import MBStock from "./../../../public/MBStock.svg"
 
-import { IRegisterData } from "./types";
+
+import { schema } from './validations';
+
+
 
 export const Register = () => {
 
+    function registerUser(data: IRegisterData){
+        console.log('Cadastro com sucesso');
+    }
 
     const [step, setStep] = useState(1);
-    const { register } = useForm();
+    const [showPassword, setShowPassword] = useState(false);
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+      } = useForm<IRegisterData>({
+        resolver: yupResolver(schema),
+      });
 
+    console.log(errors)
 
     return (
         <>
@@ -25,9 +43,9 @@ export const Register = () => {
 
 
 
-            <FormStep step={step}>
+            <FormStep step={step} onSubmit={handleSubmit(registerUser)}>
                 <legend>Faça o seu registro:</legend>
-                <PageNumber key={0} pageNumber={step} />
+                <PageNumber pageNumber={step} />
 
                 <fieldset>
 
@@ -38,6 +56,9 @@ export const Register = () => {
                                 id='name'
                                 label='Nome'
                                 type='text'
+                                error={errors.name?.message}
+                                {...register('name')}
+
                             ></Input>
 
 
@@ -45,12 +66,17 @@ export const Register = () => {
                                 id='surname'
                                 label='Sobrenome'
                                 type='text'
+                                error={errors.surname?.message}
+                                {...register('surname')}
+
                             ></Input>
 
                             <Input
                                 id='userName'
                                 label='Nome de usuário'
                                 type='text'
+                                error={errors.userName?.message}
+                                {...register('userName')}
                             ></Input>
 
 
@@ -65,19 +91,49 @@ export const Register = () => {
                                 id="email"
                                 label="E-mail"
                                 type='email'
+                                error={errors.email?.message}
+                                {...register('email')}
                             ></Input>
+
+
+                            
 
                             <Input
                                 id="password"
                                 label="Senha"
-                                type="password"
-                            ></Input>
-
+                                type={showPassword ? 'text' : 'password'}
+                                error={errors.password?.message}
+                                {...register('password')}
+                                
+                            >                            
+                                <Button
+                                    type='button'
+                                    variant='inline'
+                                    width='auto'
+                                    onClick={()=>setShowPassword(!showPassword)}
+                                >
+                                    {showPassword ? <AiFillEye/> : <AiFillEyeInvisible/>}
+                                </Button>
+                            
+                            </Input>
+                                
                             <Input
                                 id="password"
                                 label="Confirmar senha:"
-                                type="password"
-                            ></Input>
+                                type={showPassword ?'text' : 'password'}
+                                error={errors.passwordConfirmation?.message}
+                                {...register('passwordConfirmation')}
+                            >
+                                <Button
+                                    type='button'
+                                    variant='inline'
+                                    width='auto'
+                                    onClick={()=>setShowPassword(!showPassword)}
+                                >
+                                    {showPassword ? <AiFillEye/> : <AiFillEyeInvisible/>}
+                                </Button>
+                            </Input>
+                            
                             <Button variant="primary" type="submit">
                                 Concluir
                             </Button>

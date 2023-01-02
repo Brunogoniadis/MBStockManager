@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export default createGlobalStyle`
     :root{
-        --error-color:#FF0000;
+        --error-color:#EA524F;
         --primary-color: #1665CE;
         --color-disable: #555555;
         --color-disableButton: #f8f8f8;

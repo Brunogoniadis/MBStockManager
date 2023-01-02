@@ -34,7 +34,7 @@ export const FormStep  = styled.form<IFormStepProps>`
     }
         
     Button{
-        margin-top: 25px;
+        margin-top: 30px;
     }
 
     fieldset {

@@ -1,7 +1,7 @@
 export interface IRegisterData{
     name:string;
+    userName:string
     surname:string;
-    title: string;
     email: string;
     password: string;
     passwordConfirmation: string;

@@ -18,7 +18,7 @@ export const Container= styled.form`
     padding: 40px;
 
     Button{
-        margin-top: 25px;
+        margin-top: 30px;
     }
     fieldset{
         border: none;

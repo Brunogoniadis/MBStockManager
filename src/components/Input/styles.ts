@@ -1,8 +1,25 @@
 import styled from "styled-components";
 
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+` 
+export const Icon = styled.div`
+    position: absolute;
+    top:-90%;
+    left: 88%;
+    transform: translateY(-50%);
+    z-index:1001;
+
+`
+
 export const Container = styled.div`
+    
     div {
         height: 54px;
+        
+        width: 100%;
         position: relative;
         display: flex;
         align-items: center;
@@ -60,16 +77,18 @@ export const Container = styled.div`
         svg {
             width: 18px;
             height: 18px;
+            position: absolute;
         }
     }
     
     p.error-input {
         margin-top: 2px;
+        position: absolute;
         text-align: left;
-        color: var(--color-error)
+        color: var(--error-color)
     }
     & + & {
-        margin-top: 12px;
+        margin-top: 28px;
     }
 
     
