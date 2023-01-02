@@ -51,7 +51,7 @@ export const Container = styled.div`
             position: absolute;
             top: 0;
             padding-left: 20px;
-            transition: top 0.5s, left 0.3s;
+            transition: top 0.5s, left 0.3s; 
         }
         input:is(:focus, :not(:placeholder-shown)) + label {
             top: -10px;
