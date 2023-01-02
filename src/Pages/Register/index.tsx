@@ -2,11 +2,13 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup'
 
-import { Button } from "../../styles/Button";
+import { Button, Link } from "../../styles/Button";
 
-import { AiFillEye, AiFillEyeInvisible } from 'react-icons/ai'
+import { AiFillEye, AiFillEyeInvisible, AiOutlineClose } from 'react-icons/ai'
 
-import { Logo, FormStep  } from "../../styles/FormStep";
+import { Logo, FormStep, ContainerTitle } from "./FormStep";
+
+
 import { Input } from "../../components/Input/"
 import { PageNumber } from "../../components/PageNumber";
 
@@ -20,7 +22,7 @@ import { schema } from './validations';
 
 export const Register = () => {
 
-    function registerUser(data: IRegisterData){
+    function registerUser(data: IRegisterData) {
         console.log('Cadastro com sucesso');
     }
 
@@ -30,9 +32,9 @@ export const Register = () => {
         register,
         handleSubmit,
         formState: { errors },
-      } = useForm<IRegisterData>({
+    } = useForm<IRegisterData>({
         resolver: yupResolver(schema),
-      });
+    });
 
     console.log(errors)
 
@@ -42,15 +44,23 @@ export const Register = () => {
 
 
 
-
             <FormStep step={step} onSubmit={handleSubmit(registerUser)}>
+
+                <div className='containerTitle'>
+                    <Link variant='icon' to='/'>
+                        <AiOutlineClose />
+                    </Link>
+
+
+                </div>
+
                 <legend>Faça o seu registro:</legend>
                 <PageNumber pageNumber={step} />
 
                 <fieldset>
 
 
-                    <div className= 'steps-container'>
+                    <div className='steps-container'>
                         <div>
                             <Input
                                 id='name'
@@ -84,7 +94,19 @@ export const Register = () => {
                                 setStep(2)} type="button">
                                 Próximo
                             </Button>
+
+
+                            <Link
+                                to='/'
+                                type='button'
+                                variant='inline'
+                                onClick={() => setStep(1)}
+                            >
+                                Voltar
+                            </Link>
+
                         </div>
+
 
                         <div>
                             <Input
@@ -96,7 +118,7 @@ export const Register = () => {
                             ></Input>
 
 
-                            
+
 
                             <Input
                                 id="password"
@@ -104,23 +126,23 @@ export const Register = () => {
                                 type={showPassword ? 'text' : 'password'}
                                 error={errors.password?.message}
                                 {...register('password')}
-                                
-                            >                            
+
+                            >
                                 <Button
                                     type='button'
                                     variant='inline'
                                     width='auto'
-                                    onClick={()=>setShowPassword(!showPassword)}
+                                    onClick={() => setShowPassword(!showPassword)}
                                 >
-                                    {showPassword ? <AiFillEye/> : <AiFillEyeInvisible/>}
+                                    {showPassword ? <AiFillEye /> : <AiFillEyeInvisible />}
                                 </Button>
-                            
+
                             </Input>
-                                
+
                             <Input
                                 id="password"
                                 label="Confirmar senha:"
-                                type={showPassword ?'text' : 'password'}
+                                type={showPassword ? 'text' : 'password'}
                                 error={errors.passwordConfirmation?.message}
                                 {...register('passwordConfirmation')}
                             >
@@ -128,15 +150,17 @@ export const Register = () => {
                                     type='button'
                                     variant='inline'
                                     width='auto'
-                                    onClick={()=>setShowPassword(!showPassword)}
+                                    onClick={() => setShowPassword(!showPassword)}
                                 >
-                                    {showPassword ? <AiFillEye/> : <AiFillEyeInvisible/>}
+                                    {showPassword ? <AiFillEye /> : <AiFillEyeInvisible />}
                                 </Button>
                             </Input>
-                            
+
                             <Button variant="primary" type="submit">
                                 Concluir
                             </Button>
+
+
 
                         </div>
 

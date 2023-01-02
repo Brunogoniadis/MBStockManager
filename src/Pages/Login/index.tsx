@@ -1,39 +1,37 @@
-import { Button } from "../../styles/Button";
-import { Container,Logo } from "./styles";
+import { Button, Link } from "../../styles/Button";
+import { Container, Logo } from "./styles";
 import MBStock from "./../../../public/MBStock.svg"
 import { Input } from "../../components/Input";
+import { FormStep } from "../../styles/FormStep";
 
-
-export const Login = () =>(
+export const Login = () => (
     <>
-        <Logo src={MBStock}/>    
+        <Logo src={MBStock} />
         <Container>
-
- 
-        <Input
+            <Input
                 id='email'
                 label='E-mail'
                 type='email'
             >
-        </Input>
+            </Input>
 
 
-        <Input
+            <Input
                 id='password'
                 label='Senha'
                 type='password'
             >
-        </Input>
+            </Input>
 
 
-            <Button variant="primary" >   
-                ENTRAR        
+            <Button variant="primary" >
+                ENTRAR
             </Button>
 
 
-            <Button variant="inline">
+            <Link to='/register' variant="inline">
                 Não possui acesso? Crie aqui!
-            </Button>
+            </Link>
 
             <Button variant="noline">
                 <p>Esqueci minha senha</p>

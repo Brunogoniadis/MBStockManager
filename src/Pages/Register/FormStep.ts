@@ -28,6 +28,13 @@ export const FormStep  = styled.form<IFormStepProps>`
     margin: 25px;
     overflow: hidden;
 
+    .containerTitle{
+        
+        display: flex;
+        width: 85%;
+        justify-content: flex-start;
+    }
+
     legend{
             margin-bottom:15px;
             margin-top: -5px;
