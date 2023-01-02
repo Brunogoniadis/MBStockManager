@@ -54,19 +54,17 @@ export const Container = styled.div`
             transition: top 0.5s, left 0.3s;
         }
         input:is(:focus, :not(:placeholder-shown)) + label {
-            top: -20px;
+            top: -10px;
             left: 10px;
             
             height: fit-content;
-            background-color: var(--primary-color);
-            border: solid 2px;
 
             padding: 3px 10px;
             border-radius: 14px;
-    
-            color: #fff;
-            font-size: 14px;
-            transition: 0.45s ;
+            background-color: var(--color-containerPages);
+            color: var(--color-text);
+            font-size: 12px;
+            transition: 0.25s ;
 
         }
     
@@ -88,7 +86,7 @@ export const Container = styled.div`
         color: var(--error-color)
     }
     & + & {
-        margin-top: 28px;
+        margin-top: 32px;
     }
 
     

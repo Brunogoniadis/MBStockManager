@@ -8,7 +8,6 @@ export interface IPageNumberProps {
 export const Container = styled.div`
     width: 80px;
     margin-top: -15px;
-    margin-bottom: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
