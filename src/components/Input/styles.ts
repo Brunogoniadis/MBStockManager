@@ -31,6 +31,7 @@ export const Container = styled.div`
             width: 100%;
             height: 100%;
             padding: 20px;
+            padding-right: 30px;
             border: 1.25px solid;
             display: flex;
             color: var(--color-text);
@@ -75,6 +76,8 @@ export const Container = styled.div`
             width: 18px;
             height: 18px;
             position: absolute;
+            left: 20px;
+            bottom: -5px
         }
     }
     
