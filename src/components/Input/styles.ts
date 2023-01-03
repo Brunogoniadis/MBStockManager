@@ -24,7 +24,6 @@ export const Container = styled.div`
         display: flex;
         align-items: center;
     
-        border-radius: 6px;
 
         color: var(--color-text);
         
@@ -35,7 +34,7 @@ export const Container = styled.div`
             border: 1.25px solid;
             display: flex;
             color: var(--color-text);
-            border-radius: 10px;
+            border-radius: 5px;
             border-color: var(--color-border);
 
         :focus{

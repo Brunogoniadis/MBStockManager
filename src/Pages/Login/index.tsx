@@ -2,7 +2,6 @@ import { Button, Link } from "../../styles/Button";
 import { Container, Logo } from "./styles";
 import MBStock from "./../../../public/MBStock.svg"
 import { Input } from "../../components/Input";
-import { FormStep } from "../../styles/FormStep";
 
 export const Login = () => (
     <>
@@ -28,14 +27,14 @@ export const Login = () => (
                 ENTRAR
             </Button>
 
-
             <Link to='/register' variant="inline">
-                Não possui acesso? Crie aqui!
+                <p>Não possui acesso? Crie aqui!</p>
             </Link>
 
-            <Button variant="noline">
+            <Link variant="noline">
                 <p>Esqueci minha senha</p>
-            </Button>
+            </Link>
+
 
 
 

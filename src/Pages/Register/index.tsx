@@ -4,9 +4,9 @@ import { yupResolver } from '@hookform/resolvers/yup'
 
 import { Button, Link } from "../../styles/Button";
 
-import { AiFillEye, AiFillEyeInvisible, AiOutlineClose } from 'react-icons/ai'
+import { AiFillEye, AiFillEyeInvisible, AiOutlineArrowLeft } from 'react-icons/ai'
 
-import { Logo, FormStep, ContainerTitle } from "./FormStep";
+import { Logo, FormStep } from "./FormStep";
 
 
 import { Input } from "../../components/Input/"
@@ -48,7 +48,7 @@ export const Register = () => {
 
                 <div className='containerTitle'>
                     <Link variant='icon' to='/'>
-                        <AiOutlineClose />
+                        <AiOutlineArrowLeft />
                     </Link>
 
 
@@ -96,14 +96,7 @@ export const Register = () => {
                             </Button>
 
 
-                            <Link
-                                to='/'
-                                type='button'
-                                variant='inline'
-                                onClick={() => setStep(1)}
-                            >
-                                Voltar
-                            </Link>
+
 
                         </div>
 
@@ -158,6 +151,14 @@ export const Register = () => {
 
                             <Button variant="primary" type="submit">
                                 Concluir
+                            </Button>
+
+                            <Button
+                                type='button'
+                                variant='inline'
+                                onClick={() => setStep(1)}
+                            >
+                                Voltar
                             </Button>
 
 

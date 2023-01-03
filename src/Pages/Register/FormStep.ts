@@ -19,7 +19,7 @@ export const FormStep  = styled.form<IFormStepProps>`
 
     flex-direction: column;
     text-align: center;
-    border-radius: 16px;
+    border-radius: 5px;
 
 
     background-color: var(--color-containerPages);
@@ -30,8 +30,9 @@ export const FormStep  = styled.form<IFormStepProps>`
 
     .containerTitle{
         
+        position: absolute;
         display: flex;
-        width: 85%;
+        width: 400px;
         justify-content: flex-start;
     }
 
@@ -42,6 +43,7 @@ export const FormStep  = styled.form<IFormStepProps>`
         
     Button{
         margin-top: 30px;
+        margin-bottom: -20px;
     }
 
     fieldset {

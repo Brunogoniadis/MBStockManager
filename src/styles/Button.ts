@@ -42,7 +42,7 @@ export const Button = styled.button<IButtonProps>`
     ${({ variant }) => ButtonStyled[variant]}
     ${ButtonStyledDefault}
     width: ${({ width }) => width || '100%' } ;
-    border-radius: 10px;
+    border-radius: 5px;
     border: none;
 `;
 
@@ -54,4 +54,5 @@ export const Link = styled(LinkRouter)<IButtonProps>`
    display: flex;
    justify-content: center;
    align-items: center;
+   
 `
