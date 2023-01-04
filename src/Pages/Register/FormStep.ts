@@ -28,6 +28,13 @@ export const FormStep  = styled.form<IFormStepProps>`
     margin: 25px;
     overflow: hidden;
 
+
+    @media (min-width: 320px) {
+        height: 100%;
+        width: 100%;
+        
+    }
+
     .containerTitle{
         
         position: absolute;
@@ -66,10 +73,17 @@ export const FormStep  = styled.form<IFormStepProps>`
     }
 
     }
+
+
 `
 
 
 
 export const Logo = styled.img`
     margin-bottom: 57px;
+
+    @media (min-width: 375px) {
+        margin-top: 20px;
+        margin-bottom: -2px;
+    }
 `
