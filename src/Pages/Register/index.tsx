@@ -47,15 +47,26 @@ export const Register = () => {
             <FormStep step={step} onSubmit={handleSubmit(registerUser)}>
 
                 <div className='containerTitle'>
-                    <Link variant='icon' to='/'>
-                        <AiOutlineArrowLeft />
-                    </Link>
+                    
+                <div className="wrapperTitleItens">
+                    <div className="arrowLeftContainer">
+                            <Link variant='icon' to='/'>
+                                <AiOutlineArrowLeft />
+                            </Link>
+                    </div>
 
+                    <div className="pageNumberContainer">
+                        <PageNumber pageNumber={step} />
+                    </div>
+                    <div className="pageNumberContainer">
+     
+                    </div>
+                </div>
 
                 </div>
 
                 <legend>Faça o seu registro:</legend>
-                <PageNumber pageNumber={step} />
+
 
                 <fieldset>
 

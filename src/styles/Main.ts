@@ -7,8 +7,9 @@ export const Main = styled.main`
     align-items: center;
 
     min-height: 100vh;
-    max-height: 1080px;
+    max-width: 100vw;
     margin: auto;
 
     background-color: var(--color-backgroundMain);
+    
 `

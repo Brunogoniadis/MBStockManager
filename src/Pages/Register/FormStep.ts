@@ -29,18 +29,41 @@ export const FormStep  = styled.form<IFormStepProps>`
     overflow: hidden;
 
 
-    @media (min-width: 320px) {
-        height: 100%;
-        width: 100%;
-        
+    @media (min-width: 375px) {
+        height: 90%;
+        width: 90%;
     }
 
     .containerTitle{
         
-        position: absolute;
+        width: 85%;
         display: flex;
-        width: 400px;
-        justify-content: flex-start;
+        justify-content: start;
+        align-items: center;
+
+        .wrapperTitleItens{
+            
+            display: flex;
+            width: 100%;
+            
+            justify-content: space-between;
+            .arrowLeftContainer{
+                width:33%;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                left: -12%;
+
+            }
+            .pageNumberContainer{
+                width:33%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+
     }
 
     legend{
@@ -80,10 +103,5 @@ export const FormStep  = styled.form<IFormStepProps>`
 
 
 export const Logo = styled.img`
-    margin-bottom: 57px;
 
-    @media (min-width: 375px) {
-        margin-top: 20px;
-        margin-bottom: -2px;
-    }
 `
